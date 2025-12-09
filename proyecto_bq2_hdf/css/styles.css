@@ -1,0 +1,170 @@
+/* estilos generales */
+body {
+    background-color: #fafafa;
+    font-family: Arial, sans-serif;
+}
+
+/* menu hamburgesa */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    position: relative;
+}
+
+.hamburguesa {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguesa span {
+    display: block;
+    height: 4px;
+    background: white;
+    margin: 5px 0;
+    transition: .3s;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* en movil */
+@media (max-width: 768px) {
+
+    .hamburguesa {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        z-index: 30;
+    }
+
+    .btn-modo {
+        position: absolute;
+        right: 55px; /* espacio para la hamburguesa */
+        top: 12px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        padding: 15px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 150px;
+        z-index: 10;
+    }
+
+    .menu.mostrar {
+        display: flex;
+    }
+}
+
+
+/*modal*/
+
+.modal-custom {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.cerrar {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* tarjetas */
+.card {
+    margin-bottom: 20px;
+}
+/* modo oscuro */
+body.oscuro {
+    background: #1a1a1a;
+    color: white;
+    transition: all 0.3s ease;/* transicion al modo oscuro pa que no tarde tanto*/
+
+}
+
+body.oscuro .header {
+    background: #111;
+    transition: all 0.3s ease;
+
+}
+
+body.oscuro .menu {
+    background: #222;
+    transition: all 0.3s ease;
+
+}
+
+body.oscuro .card {
+    background: #333;
+    color: white;
+    transition: all 0.3s ease;
+
+}
+
+body.oscuro .modal-contenido {
+    background: #333;
+    color: white;
+    transition: all 0.3s ease;
+
+}
+
+.btn-modo {
+    margin-left: auto;
+    margin-right: 15px;
+    padding: 7px 12px;
+    background: #666;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+
+}
+
+
+
+/*footer*/
+.footer {
+    background-color: #f8f9fa;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+/* Modo oscuro */
+body.oscuro .footer {
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+    transition: all 0.3s ease;
+
+}
+
